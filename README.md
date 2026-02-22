@@ -20,6 +20,8 @@ This repo is a mix of:
 
 ## Setup
 
+Python version: `3.13.7` (pinned in `.python-version`).
+
 ```powershell
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
