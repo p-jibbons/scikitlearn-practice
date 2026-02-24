@@ -1,13 +1,13 @@
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import r2_score
+﻿from sklearn.metrics import r2_score
+
+from scikitlearn_practice import fit_linear_regression
 
 
 def test_linear_regression_smoke() -> None:
-    x = [[1], [2], [3], [4]]
-    y = [2, 4, 6, 8]
+    x = [[1.0], [2.0], [3.0], [4.0]]
+    y = [2.0, 4.0, 6.0, 8.0]
 
-    model = LinearRegression()
-    model.fit(x, y)
+    model = fit_linear_regression(x, y)
     predictions = model.predict(x)
 
     assert r2_score(y, predictions) > 0.99
