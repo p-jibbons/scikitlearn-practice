@@ -26,7 +26,9 @@ Python version: `3.13.7` (pinned in `.python-version`).
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
+pip install -e .
+pre-commit install
 ```
 
 ## Daily Workflow
@@ -35,7 +37,10 @@ pip install -r requirements.txt
 .\.venv\Scripts\Activate.ps1
 git pull
 # do focused work for the day
-git add .
+python -m ruff check .
+python -m pytest -q
+git status
+git add <files-you-changed>
 git commit -m "Day XX: <topic>"
 git push
 ```
@@ -47,6 +52,7 @@ scikitlearn-practice/
   README.md
   WORKLOG.md
   requirements.txt
+  requirements-dev.txt
   notebooks/
   src/
   tests/
@@ -125,4 +131,3 @@ Each day should leave at least one of the following:
 - a reproducible notebook output,
 - improved documentation/tests,
 - a commit message that clearly explains what changed and why.
-

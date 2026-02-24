@@ -1,4 +1,4 @@
-﻿"""Core package for scikitlearn-practice."""
+"""Core package for scikitlearn-practice."""
 
 from .modeling import fit_linear_regression
 

@@ -1,4 +1,4 @@
-﻿"""Reusable model helpers for learning workflows."""
+"""Reusable model helpers for learning workflows."""
 
 from __future__ import annotations
 

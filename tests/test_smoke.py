@@ -1,4 +1,4 @@
-﻿from sklearn.metrics import r2_score
+from sklearn.metrics import r2_score
 
 from scikitlearn_practice import fit_linear_regression
 
